@@ -1,0 +1,15 @@
+import random
+
+b = random.randint(1, 10)
+a = None
+
+while a != b:
+    a = int(input("Enter a number between 1 and 10: "))
+    if a == b:
+        print("Congratulations, you guessed it!")
+    else:
+        c = input("Unfortunately, you didn't guess it. Do you want to try again? (yes/no): ")
+        if c.lower() != "yes":
+            break
+
+input("Press Enter to exit...")
