@@ -1,23 +1,25 @@
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = input("Enter operation: (+, -, *, /, %, **) ")
+while True:
+    a = int(input("Podaj pierwszą liczbę: "))
+    b = int(input("Podaj drugą liczbę: "))
 
-if c == "+":
-    print(a + b)
-elif c == "-":
-    print(a - b)
-elif c == "*":
-    print(a * b)
-elif c == "/":
-    if b != 0:
-        print(a / b)
+    operation = input("Wybierz działanie:\n + dodawanie\n - odejmowanie\n * mnożenie\n / dzielenie:\n % reszta z dzielenia\n")
+
+    if operation == '+':
+        print(a + b)
+    elif operation == '-':
+        print(a - b)
+    elif operation == '*':
+        print(a * b)
+    elif operation == '/':
+        if b == 0:
+            print("Nie można dzielić przez zero.")
+        else:
+            print(a / b)
     else:
-        print("Cannot divide by zero!")
-elif c == "%":
-    print(a % b)
-elif c == "**":
-    print(a ** b)
-else:
-    print("This is not a valid operator")
+        print("Złe działanie\n")
 
-input("Press Enter to exit...")
+    again = input("Czy chcesz rozpocząć następne działanie? (Tak): ")
+    if again == 'Tak':
+        continue
+    else:
+        break
